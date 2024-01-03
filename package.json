@@ -4,7 +4,35 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@avnu/avnu-sdk": "^1.2.4",
+    "axios": "^1.6.2",
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
     "dotenv": "^16.3.1",
+    "figlet": "^1.7.0",
+    "fs": "^0.0.1-security",
+    "sqlite3": "^5.1.6",
     "starknet": "^5.24.3"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.11",
+    "@types/commander": "^2.12.2",
+    "@types/figlet": "^1.5.8",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.10.5",
+    "@types/sqlite3": "^3.1.11",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "cli": "npx tsc && node dist/index.js",
+    "deploy": "npx tsc && node --no-warnings dist/deploy.js",
+    "liquidity": "npx tsc && node --no-warnings dist/addLiquidity.js",
+    "snipe": "npx tsc && node --no-warnings dist/snipe.js",
+    "build": "npx tsc",
+    "test": "mocha"
   }
 }
