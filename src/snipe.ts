@@ -16,8 +16,6 @@ import { ERC20_ABI } from './ABIs/token/erc20';
 
 const STARKNET_API_ENDPOINT = process.env.STARKNET_API_ENDPOINT;
 const TESTNET_GOERLI_ENDPOINT = process.env.TESTNET_GOERLI_ENDPOINT;
-const PRIVATE_KEY = process.env.PRIVATE_KEY as string;
-const ACCOUNT_ADDRESS = process.env.ACCOUNT_ADDRESS as string;
 
 export type SnipeConfig = {
   network: string;

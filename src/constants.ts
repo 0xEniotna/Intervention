@@ -10,5 +10,3 @@ export const JEDI_ROUTER_ADDRESS_GOERLI: string =
   '0x02bcc885342ebbcbcd170ae6cafa8a4bed22bb993479f49806e72d96af94c965';
 export const TOKEN: string =
   '0x4c08f01936832e8b4026ae982b47fa44ab00d7d43f8754aee693efeabd84db0';
-export const TOKENB: string =
-  '0x075dD83E687573e08E432b4556E3c669ac33a78f6F8810C1bD231c35b27EB702';
