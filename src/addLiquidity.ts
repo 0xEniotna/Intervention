@@ -11,7 +11,7 @@ import {
 } from 'starknet';
 import fs from 'fs';
 import dotenv from 'dotenv';
-import * as Snipe from './snipe';
+import * as Snipe from './snipe_sn';
 dotenv.config();
 
 import * as cnst from './constants';

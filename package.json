@@ -5,10 +5,16 @@
   "license": "MIT",
   "dependencies": {
     "@avnu/avnu-sdk": "^1.2.4",
+    "@uniswap/sdk-core": "^4.2.0",
+    "@uniswap/swap-router-contracts": "1.1.0",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "^1.4.4",
     "axios": "^1.6.2",
     "chalk": "^4.1.2",
     "commander": "^11.1.0",
     "dotenv": "^16.3.1",
+    "ethers": "^6.11.1",
     "figlet": "^1.7.0",
     "fs": "^0.0.1-security",
     "sqlite3": "^5.1.6",
@@ -31,7 +37,8 @@
     "cli": "npx tsc && node dist/index.js",
     "deploy": "npx tsc && node --no-warnings dist/deploy.js",
     "liquidity": "npx tsc && node --no-warnings dist/addLiquidity.js",
-    "snipe": "npx tsc && node --no-warnings dist/snipe.js",
+    "snipe_sn": "npx tsc && node --no-warnings dist/snipe_sn.js",
+    "snipe_arb": "npx tsc && node --no-warnings dist/snipe_arb.js",
     "build": "npx tsc",
     "test": "mocha"
   }

@@ -13,9 +13,13 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const STARKNET_API_ENDPOINT = process.env.STARKNET_API_ENDPOINT;
-const TESTNET_GOERLI_ENDPOINT = process.env.TESTNET_GOERLI_ENDPOINT;
-const PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY as string;
-const ACCOUNT_ADDRESS = process.env.GOERLI_ADDRESS as string;
+// const TESTNET_GOERLI_ENDPOINT = process.env.TESTNET_GOERLI_ENDPOINT;
+const TESTNET_GOERLI_ENDPOINT = process.env.TESTNET_SEPOLIA_ENDPOINT;
+
+// const PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY as string;
+// const ACCOUNT_ADDRESS = process.env.GOERLI_ADDRESS as string;
+const PRIVATE_KEY = process.env.SEPOLIA_PRIVATE_KEY as string;
+const ACCOUNT_ADDRESS = process.env.SEPOLIA_ACCOUNT_ADDRESS as string;
 
 async function declareAndDeploy() {
   // connect provider
@@ -51,14 +55,17 @@ async function declareAndDeploy() {
     //   contract: compiledTestCasm,
     //   casm: compiledTestSierra,
     // });
+
     const invokeResponse = await account.deploy({
       classHash: class_hash,
       constructorCalldata: contractConstructor,
-      salt: '0x00000007',
+      salt: '0x00000001',
     });
 
     const address = invokeResponse;
     console.log('Test Contract Class Hash =', class_hash);
+    // console.log('Declare Response =', declareResponse);
+
     console.log('✅ Transaction hash =', address.transaction_hash);
     console.log('✅ Contract addr =', address.contract_address);
   } catch (e) {

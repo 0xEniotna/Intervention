@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as Snipe from '../snipe';
+import * as Snipe from '../snipe_sn';
 import dotenv from 'dotenv';
 import * as starknet from 'starknet';
 import { addrToHex } from '../utils';
